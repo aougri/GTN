@@ -38,8 +38,18 @@ function checkGuess(){
 
     }
     else if(userNumber == nbrToGuess){
-        span.innerHTML = `<span style="background-color: Green">You got it!</span>`;
-        alert("Refresh [F5] to reset!")
+        document.body.innerHTML =  `
+        <div class="outer">
+        <div class="middle">
+          <div class="inner">
+            <h1>You have won the game! Press [F5] to replay!</h1>
+            
+          </div>
+        </div>
+      </div>
+        
+        `
+
     }
 
     if(lives == 5){
