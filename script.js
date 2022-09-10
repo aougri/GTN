@@ -12,6 +12,9 @@ console.log(nbrToGuess)
 function checkGuess(){
     
     const getUserNumber = document.getElementById('input').value;
+    if (getUserNumber == "") {
+        alert("Input a number to guess")
+    }
     const userNumber = Number(getUserNumber)
     const span = document.getElementById('span')
     
@@ -29,7 +32,7 @@ function checkGuess(){
         bgColorCheck(lives)
     }
     else if(userNumber < nbrToGuess){
-        span.innerHTML = `<span style="background-color: blue">Lower</span>`;
+        span.innerHTML = `<span style="background-color: blue">Higher</span>`;
         liveCount.innerText = lives --
         bgColorCheck(lives)
 
